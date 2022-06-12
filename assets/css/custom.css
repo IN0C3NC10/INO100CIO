@@ -1,16 +1,24 @@
 @import url(default.css);
 
+a{
+    cursor: pointer;
+}
+
 a:hover{
     /* color: var(--one) !important; */
     font-weight: bold !important;
 }
 
-.modal{
-    color: black;
-}
-
 .show {
     display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal{
+    color: #333;
 }
 
 #btnToTop {
@@ -34,4 +42,15 @@ a:hover{
 .btn-circle-black:hover{
     opacity: 1 !important;
     background-color: #333 !important;
+}
+
+.btn-close{
+    color: #333 !important;
+    padding: 2px 6px 2px 6px;
+    border-radius: 3px;
+}
+
+.btn-close:hover{
+    color: white !important;
+    background-color: #333;
 }

@@ -26,7 +26,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-custom fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">IN0C3NC10</a>
+			<a class="navbar-brand font-weight-bold" href="index.html">IN0C3NC10</a>
 			<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
 				<ul class="navbar-custom navbar-nav ml-auto">
 
 					<li class="nav-item active">
-						<a class="nav-link" href="#start">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#start">Home</a>
 					</li>
 
 					<li class="nav-item">
@@ -53,18 +53,35 @@
 		</div>
 	</nav>
 
+	<!-- Modal -->
 	<div id="modal" class="modal" tabindex="-1">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 id="modalTitle" class="modal-title">Modal title</h5>
-					<button onclick="disableModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fas fa-times"></i></button>
+					<a onclick="disableModal()" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Fechar"><i class="fa fas fa-times"></i></a>
 				</div>
 				<div class="modal-body">
+					<div id="carouselContent" class="hidden" data-ride="carousel">
+						<div id="carousel" class="carousel-inner">
+							<!-- O script adiciona os slides dinâmicamente -->
+						</div>
+						<a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Próximo</span>
+						</a>
+						<br>
+					</div>
 					<p id="contentModal"></p>
 				</div>
 				<div class="modal-footer">
-					<button onclick="disableModal()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+					<button onclick="disableModal()" type="button" class="col-12 btn btn-primary"
+						data-bs-dismiss="modal">Fechar</button>
 				</div>
 			</div>
 		</div>
@@ -91,9 +108,9 @@
 	</div>
 
 	<!-- <button  title="Ir para o topo"> -->
-		<a onclick="topFunction()" id="btnToTop" class="btn btn-circle-black btn-circle page-scroll">
-			<i class="fa fa-angle-double-up animated"></i>
-		</a>
+	<a onclick="topFunction()" id="btnToTop" class="btn btn-circle-black btn-circle page-scroll">
+		<i class="fa fa-angle-double-up animated"></i>
+	</a>
 	<!-- </button> -->
 
 	<!-- About -->
@@ -112,7 +129,7 @@
 					</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 	<hr>
 
