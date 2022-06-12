@@ -1,3 +1,4 @@
+@import url(default.css);
 /*
 Template Name: Aries HTML
 Copyright: wowthemesnet, https://www.wowthemes.net, https://bootstrapstarter.com/
@@ -95,7 +96,7 @@ a:hover,a:focus {
 }
 .nav-link:hover {
 	outline:0;
-	color:#1ba39c;
+	/* color:var(--one); */
 	background-color:transparent;
 }
 .nav-link:focus,.nav-link:active {
@@ -106,10 +107,10 @@ a:hover,a:focus {
 	outline:0;
 }
 .nav-link.active {
-	color:#1ba39c;
+	color:var(--one);
 }
 .nav-link.active:hover {
-	color:#1ba39c;
+	color:var(--one);
 }
 @media(min-width:768px) {
 	.navbar-custom {

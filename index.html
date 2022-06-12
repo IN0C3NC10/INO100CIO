@@ -1,4 +1,3 @@
-<!-- inject:partials/header.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,6 +10,8 @@
 	<meta name="author" content="Bruno Inocêncio">
 	<title>IN0C3NC10</title>
 	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="assets/css/main.min.css">
 	<link
 		href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Open+Sans:300,300i,400,400i,700,700i"
@@ -35,15 +36,15 @@
 				<ul class="navbar-custom navbar-nav ml-auto">
 
 					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#start">Home <span class="sr-only">(current)</span></a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="portfolio-item.html">Projetos</a>
+						<a class="nav-link" href="#portfolio">Projetos</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contato</a>
+						<a class="nav-link" href="#contact">Contato</a>
 					</li>
 
 				</ul>
@@ -51,11 +52,27 @@
 			</div>
 		</div>
 	</nav>
-	<!-- endinject -->
+
+	<div id="modal" class="modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="modalTitle" class="modal-title">Modal title</h5>
+					<button onclick="disableModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fas fa-times"></i></button>
+				</div>
+				<div class="modal-body">
+					<p id="contentModal"></p>
+				</div>
+				<div class="modal-footer">
+					<button onclick="disableModal()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<!-- Intro -->
-	<div class="intro">
+	<div id="start" class="intro">
 		<div class="intro-body">
 			<div class="container">
 				<div class="row justify-content-center">
@@ -73,6 +90,12 @@
 		</div>
 	</div>
 
+	<!-- <button  title="Ir para o topo"> -->
+		<a onclick="topFunction()" id="btnToTop" class="btn btn-circle-black btn-circle page-scroll">
+			<i class="fa fa-angle-double-up animated"></i>
+		</a>
+	<!-- </button> -->
+
 	<!-- About -->
 	<section id="pageid">
 		<div class="container content-section">
@@ -80,15 +103,21 @@
 				<div class="col-md-8">
 					<h2 class="text-center">TUDO TRANQUILO?</h2>
 					<p>
-						Sou Bruno, um Dev Jr. apaixonado por programação. Adoro programar, independentemente da plataforma ou linguagem, mas admito que tenho uma "quedinha" pelo PHP.
+						Sou Bruno, um Dev Jr. apaixonado por programação. Adoro programar, independentemente da
+						plataforma ou linguagem, mas admito que tenho uma "quedinha" pelo PHP.
 					</p>
 					<p>
-						Procuro sempre desenvolver da melhor forma e confiabilidade possíveis, estudar, praticar, sempre assumindo minhas responsabilidades, estes são os meus pilares.
+						Procuro sempre desenvolver da melhor forma e confiabilidade possíveis, estudar, praticar, sempre
+						assumindo minhas responsabilidades, estes são os meus pilares.
 					</p>
 				</div>
 			</div>
-		</div>
-		<hr>
+		</div>	
+	</section>
+	<hr>
+
+	<!-- Portfolio -->
+	<section id="portfolio">
 		<div class="container content-section">
 			<div class="row justify-content-center">
 				<div class="col-md-8">
@@ -102,66 +131,26 @@
 				</div>
 			</div>
 		</div>
-	</section>
 
-	<!-- Portfolio -->
-	<section id="portfolio">
 		<div class="gallery">
 			<ul class="row">
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
+				<li class="col-sm-4 col-12">
+					<a onclick="showModal('project1')">
 						<img src="https://images.unsplash.com/photo-1504626835342-6b01071d182e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=975855d515c9d56352ee3bfe74287f2b&auto=format&fit=crop&w=750&q=80"
 							alt="">
 					</a>
 				</li>
 
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
+				<li class="col-sm-4 col-12">
+					<a onclick="showModal('project2')">
 						<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468a8c18f5d811cf03c654b653b5089e&auto=format&fit=crop&w=750&q=80"
 							alt="">
 					</a>
 				</li>
 
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
+				<li class="col-sm-4 col-12">
+					<a onclick="showModal('project3')">
 						<img src="https://images.unsplash.com/photo-1415650328328-1909c4ceabdb?ixlib=rb-0.3.5&s=4cb4e1b2310aa5d2307eff04f113d5f0&auto=format&fit=crop&w=750&q=80"
-							alt="">
-					</a>
-				</li>
-
-
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
-						<img src="https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b527796946e88db3a0ec912ebe1a613&auto=format&fit=crop&w=750&q=80"
-							alt="">
-					</a>
-				</li>
-
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
-						<img src="https://images.unsplash.com/photo-1495339647587-9021d80165d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79a0f3149dfec84464e0506f5ccb9107&auto=format&fit=crop&w=750&q=80"
-							alt="">
-					</a>
-				</li>
-
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
-						<img src="https://images.unsplash.com/photo-1506852613309-def986635d7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f8b18461ac8b3abab7e7188eb342d8e1&auto=format&fit=crop&w=750&q=80"
-							alt="">
-					</a>
-				</li>
-
-
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
-						<img src="https://images.unsplash.com/photo-1430915860098-2e303ffb8276?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f46f45c52d542e4b7cba47f1709cc98c&auto=format&fit=crop&w=750&q=80"
-							alt="">
-					</a>
-				</li>
-
-				<li class="col-md-3">
-					<a href="portfolio-item.html">
-						<img src="https://images.unsplash.com/photo-1430263431647-7bed9f792e72?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2f8e40576370da12b7f4c8c97f4a5044&auto=format&fit=crop&w=750&q=80"
 							alt="">
 					</a>
 				</li>
@@ -177,21 +166,22 @@
 				<div class="col-md-8">
 					<h2>ENTRE EM CONTATO</h2>
 					<p>
-						Caso tenha alguma dúvida ou queira entrar em contato comigo, pode utilizar alguma das opções abaixo, muito obrigado e nos vemos em breve!
+						Caso tenha alguma dúvida ou queira entrar em contato comigo, pode utilizar alguma das opções
+						abaixo, muito obrigado e nos vemos em breve!
 					</p>
 
 					<ul class="list-inline banner-social-buttons">
 
 						<li class="d-inline">
 							<a href="mailto:bruno.inocencio@fatec.sp.gov.br" class="btn btnghost btn-lg">
-								<i class="fa far fa-envelope fa-fw"></i> 
+								<i class="fa far fa-envelope fa-fw"></i>
 								<span class="network-name">Outlook</span>
 							</a>
 						</li>
 
 						<li class="d-inline">
 							<a href="https://github.com/IN0C3NC10" target="_blank" class="btn btnghost btn-lg">
-								<i class="fa fa-github fa-fw"></i> 
+								<i class="fa fa-github fa-fw"></i>
 								<span class="network-name">GitHub</span>
 							</a>
 						</li>
@@ -210,9 +200,9 @@
 		</div>
 	</footer>
 
+	<!-- Javascript -->
+	<script src="assets/js/custom.js"></script>
 	<script src="assets/js/main.min.js"></script>
-
-
 	<script src="assets/js/theme.js"></script>
 
 </body>
