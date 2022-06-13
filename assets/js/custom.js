@@ -75,17 +75,19 @@ function buildCarousel(imagesPath) {
  * @param {String} project Recebe o nome do projeto (já predefinido na função) e automaticamente irá criar o carrossel correspondente
  */
 function showModal(project) {
-    if (project != '') {
+    if (project != '' && project > 0 && project < 4) {
         let modalCarousel = document.getElementById('carouselContent');
         let modalTitle = document.getElementById('modalTitle');
         let modalContent = document.getElementById('contentModal');
+        let modalLabel = document.getElementById('modalLabel');
         // reseta o modal e o conteúdo textual
         modalCarousel.setAttribute('class', 'hidden');
         modalContent.textContent = '';
 
-        if (project == 'project1') {
+        if (project == 1) {
             modalTitle.textContent = 'Rocha Digital';
             modalContent.innerHTML = 'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.';
+            modalLabel.textContent = 'Laravel, PHP';
             let slider = {
                 1: ['./assets/img/screenshot.jpg', 'a', 'a'],
                 2: ['./assets/img/screenshot.jpg', 'a', 'b'],
@@ -93,12 +95,14 @@ function showModal(project) {
             }
             modalCarousel.setAttribute('class', 'carousel slide');
             buildCarousel(slider);
-        } else if (project == 'project2') {
+        } else if (project == 2) {
             modalTitle.textContent = 'Agenda Sustentável';
             modalContent.innerHTML = 'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.';
-        } else if (project == 'project3') {
+            modalLabel.textContent = 'PHP';
+        } else if (project == 3) {
             modalTitle.textContent = 'Alugo Agora';
             modalContent.innerHTML = 'Projeto desenvolvido como Trabalho de Graduação durante minha faculdade de Sistemas para Internet, foi desenvolvido com a framework Laravel, contando com sistema de mensagens entre usuários, gerenciamento de usuários, imóveis e aluguéis.';
+            modalLabel.textContent = 'Laravel, PHP';
         }
         document.getElementById('modal').setAttribute('class', 'show modal');
     }
@@ -109,4 +113,17 @@ function showModal(project) {
  */
 function disableModal() {
     document.getElementById('modal').classList.remove('show');
+}
+
+function showOverlay(project) {
+    if (project > 0){
+        document.getElementById('over'+project).setAttribute('class', 'overlay col-12');
+    }
+}
+
+function disableOverlay() {
+    let items = document.getElementsByClassName('overlay');
+    for (let key in items){
+        items[key].setAttribute('class','hidden');
+    }
 }

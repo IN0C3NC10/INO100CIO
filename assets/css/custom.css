@@ -54,3 +54,30 @@ a:hover{
     color: white !important;
     background-color: #333;
 }
+
+.label {
+    color : #868e96;
+    text-align: right;
+}
+#modalLabel{
+    padding-right: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.overlay{
+    position: absolute !important;
+    z-index: 2;
+    color: white;
+    background: #000;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content{
+    position: relative;
+    top: 30%;
+}
