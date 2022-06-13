@@ -1,3 +1,33 @@
+// Constante onde são definidos os projetos
+const PROJECTS = [
+    [
+        'Rocha Digital', 
+        'Laravel, PHP', 
+        'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
+        [
+            ['./assets/img/screenshot.jpg', 'a', 'a'], 
+            ['./assets/img/screenshot.jpg', 'a', 'b'],
+            ['./assets/img/screenshot.jpg', 'a', 'c'],
+        ]
+    ],
+    [
+        'Agenda Sustentável', 
+        'PHP', 
+        'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.', 
+        
+    ],
+    [
+        'Alugo Agora', 
+        'Laravel, PHP', 
+        'Projeto desenvolvido como Trabalho de Graduação durante minha faculdade de Sistemas para Internet, foi desenvolvido com a framework Laravel, contando com sistema de mensagens entre usuários, gerenciamento de usuários, imóveis e aluguéis.', 
+        [
+            ['./assets/img/screenshot.jpg', 'a', 'a'], 
+            ['./assets/img/screenshot.jpg', 'a', 'b'],
+            ['./assets/img/screenshot.jpg', 'a', 'c'],
+        ]
+    ],
+]
+
 /**
  * BOTÃO VOLTAR AO TOPO
  * ********************************************************************************************
@@ -29,17 +59,18 @@ function topFunction() {
 
 /**
  * CRIA OS ITENS DO CARROSSEL
- * @param {Object} imagesPath Objeto com array de 3 posições, sendo o caminho da imagem [0], conteúdo do "alt" [1] e o título [2]
+ * @param {Array} imagesPath Array com 3 posições, sendo o caminho da imagem [0], conteúdo do "alt" [1] e o título [2]
  */
 function buildCarousel(imagesPath) {
     // verifica se o objeto não esta vazio
-    if (Object.keys(imagesPath).length > 0) {
+    if (imagesPath.length > 0) {
         // recupera o carrossel e define a posição para os elementos
         let carousel = document.getElementById('carousel');
         let position = 0;
         carousel.innerHTML = '';
 
         for (let data in imagesPath) {
+            console.log(imagesPath[data][0]);
             let div = document.createElement('div');
             // verifica se é o primeiro elemento para poder definir como ativo ou não
             if (position > 0) {
@@ -72,10 +103,12 @@ function buildCarousel(imagesPath) {
 
 /**
  * HABILITA A MODAL E EXIBE OS DETALHES DE CADA PROJETO
- * @param {String} project Recebe o nome do projeto (já predefinido na função) e automaticamente irá criar o carrossel correspondente
+ * @param {Number} projectNumber Recebe o nome do projeto (já predefinido na função) e automaticamente irá criar o carrossel correspondente
  */
-function showModal(project) {
-    if (project != '' && project > 0 && project < 4) {
+function showModal(projectNumber) {
+    if (projectNumber != '' && projectNumber > 0 && projectNumber < 4) {
+        // altera de numero do projeto para a posição do projeto
+        projectNumber--;
         let modalCarousel = document.getElementById('carouselContent');
         let modalTitle = document.getElementById('modalTitle');
         let modalContent = document.getElementById('contentModal');
@@ -84,26 +117,19 @@ function showModal(project) {
         modalCarousel.setAttribute('class', 'hidden');
         modalContent.textContent = '';
 
-        if (project == 1) {
-            modalTitle.textContent = 'Rocha Digital';
-            modalContent.innerHTML = 'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.';
-            modalLabel.textContent = 'Laravel, PHP';
-            let slider = {
-                1: ['./assets/img/screenshot.jpg', 'a', 'a'],
-                2: ['./assets/img/screenshot.jpg', 'a', 'b'],
-                3: ['./assets/img/screenshot.jpg', 'a', 'c'],
+        // define algumas propriedades da modal
+        modalTitle.textContent = PROJECTS[projectNumber][0];
+        modalLabel.textContent = PROJECTS[projectNumber][1];
+        modalContent.innerHTML = PROJECTS[projectNumber][2];
+
+        // verifica a existência das propriedades do slide na constante
+        if (PROJECTS[projectNumber][3] != undefined){
+            if (PROJECTS[projectNumber][3].length > 0){
+                modalCarousel.setAttribute('class', 'carousel slide');
+                buildCarousel(PROJECTS[projectNumber][3]);
             }
-            modalCarousel.setAttribute('class', 'carousel slide');
-            buildCarousel(slider);
-        } else if (project == 2) {
-            modalTitle.textContent = 'Agenda Sustentável';
-            modalContent.innerHTML = 'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.';
-            modalLabel.textContent = 'PHP';
-        } else if (project == 3) {
-            modalTitle.textContent = 'Alugo Agora';
-            modalContent.innerHTML = 'Projeto desenvolvido como Trabalho de Graduação durante minha faculdade de Sistemas para Internet, foi desenvolvido com a framework Laravel, contando com sistema de mensagens entre usuários, gerenciamento de usuários, imóveis e aluguéis.';
-            modalLabel.textContent = 'Laravel, PHP';
         }
+
         document.getElementById('modal').setAttribute('class', 'show modal');
     }
 }
@@ -115,9 +141,10 @@ function disableModal() {
     document.getElementById('modal').classList.remove('show');
 }
 
-function showOverlay(project) {
-    if (project > 0){
-        document.getElementById('over'+project).setAttribute('class', 'overlay col-12');
+function showOverlay(projectNumber) {
+    if (projectNumber > 0){
+        document.getElementById('overlayContent'+projectNumber).textContent = PROJECTS[projectNumber-1][0];
+        document.getElementById('over'+projectNumber).setAttribute('class', 'overlay col-12');
     }
 }
 
