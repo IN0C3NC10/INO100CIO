@@ -5,28 +5,66 @@ const PROJECTS = [
         'Laravel, PHP', 
         'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
         [
-            ['./assets/img/screenshot.jpg', 'a', 'a'], 
-            ['./assets/img/screenshot.jpg', 'a', 'b'],
-            ['./assets/img/screenshot.jpg', 'a', 'c'],
+            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'a', 'a'], 
+            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'a', 'b'],
+            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'a', 'c'],
         ]
     ],
     [
         'Agenda Sustentável', 
         'PHP', 
-        'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.', 
+        'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
+        [
+            ['./assets/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial', 'Página Inicial'], 
+            ['./assets/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030', 'Página Jogo 2030'],
+            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'Conta com V-Libras', 'V-Libras'],
+        ]
         
     ],
     [
         'Alugo Agora', 
         'Laravel, PHP', 
-        'Projeto desenvolvido como Trabalho de Graduação durante minha faculdade de Sistemas para Internet, foi desenvolvido com a framework Laravel, contando com sistema de mensagens entre usuários, gerenciamento de usuários, imóveis e aluguéis.', 
+        'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
-            ['./assets/img/screenshot.jpg', 'a', 'a'], 
-            ['./assets/img/screenshot.jpg', 'a', 'b'],
-            ['./assets/img/screenshot.jpg', 'a', 'c'],
+            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'a', 'c'],
+            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'a', 'c'],
+            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'a', 'c'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'a', 'c'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'a', 'b'],
+            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'a', 'a'], 
         ]
     ],
 ]
+
+
+/**
+ * FUNÇÃO ONLOAD
+ * ********************************************************************************************
+**/
+window.onload = function () {
+    // recupera todas as imagens de exibição do modal e em cada uma é definida a imagem do objeto
+    let modalsElem = document.getElementsByName("premodal-component");
+    console.log(modalsElem);
+    if (modalsElem.length > 0){
+        let modalsLink = document.getElementsByName("premodal-link");
+        let modalsImg = document.getElementsByName("premodal-img");
+        for(let i = 0; i < modalsElem.length; i++){
+            // atributos para o elemento
+            modalsElem[i].setAttribute('onmouseover', 'showOverlay('+(i+1)+')');
+            modalsElem[i].setAttribute('onmouseleave', 'disableOverlay()');
+            modalsElem[i].setAttribute('class', 'col-md-4 col-12');
+            // atributos para os links
+            modalsLink[i].setAttribute('onclick', 'showModal('+(i+1)+')');
+            if(PROJECTS[i][3] != undefined){
+                modalsImg[i].setAttribute('src', PROJECTS[i][3][0][0]);
+            } else {
+                modalsImg[i].setAttribute('src', './assets/img/inocencio-background-header.png');
+            }
+        }
+    }
+
+}
+
 
 /**
  * BOTÃO VOLTAR AO TOPO
@@ -70,7 +108,6 @@ function buildCarousel(imagesPath) {
         carousel.innerHTML = '';
 
         for (let data in imagesPath) {
-            console.log(imagesPath[data][0]);
             let div = document.createElement('div');
             // verifica se é o primeiro elemento para poder definir como ativo ou não
             if (position > 0) {

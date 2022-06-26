@@ -88,8 +88,8 @@
 					</span>
 				</div>
 				<div class="modal-footer">
-					<button onclick="disableModal()" type="button" class="col-12 btn btn-primary"
-						data-bs-dismiss="modal">Fechar</button>
+					<button onclick="disableModal()" type="button" class="col-12 btn btnghost"
+						data-bs-dismiss="modal" style="margin:0px">Fechar</button>
 				</div>
 			</div>
 		</div>
@@ -139,7 +139,7 @@
 	<hr>
 
 	<!-- Portfolio -->
-	<section id="portfolio">
+	<section id="portfolio" class="text-center">
 		<div class="container content-section">
 			<div class="row justify-content-center">
 				<div class="col-md-8">
@@ -156,8 +156,8 @@
 
 		<div class="gallery">
 			<ul class="row">
-				<li onmouseover="showOverlay(1)" onmouseleave="disableOverlay()" class="col-sm-4 col-12">
-					<a onclick="showModal(1)">
+				<li name="premodal-component">
+					<a name="premodal-link">
 						<div id="over1" class="hidden">
 							<div class="overlay-content">
 								<span id="overlayContent1"></span>
@@ -165,13 +165,12 @@
 								<i class="fa fa-plus mt-4"></i>
 							</div>
 						</div>
-						<img src="https://images.unsplash.com/photo-1504626835342-6b01071d182e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=975855d515c9d56352ee3bfe74287f2b&auto=format&fit=crop&w=750&q=80"
-							alt="">
+						<img name="premodal-img">
 					</a>
 				</li>
 
-				<li onmouseover="showOverlay(2)" onmouseleave="disableOverlay()" class="col-sm-4 col-12">
-					<a onclick="showModal(2)">
+				<li name="premodal-component">
+					<a name="premodal-link">
 						<div id="over2" class="hidden">
 							<div class="overlay-content">
 								<span id="overlayContent2"></span>
@@ -179,13 +178,12 @@
 								<i class="fa fa-plus mt-4"></i>
 							</div>
 						</div>
-						<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468a8c18f5d811cf03c654b653b5089e&auto=format&fit=crop&w=750&q=80"
-							alt="">
+						<img name="premodal-img">
 					</a>
 				</li>
 
-				<li onmouseover="showOverlay(3)" onmouseleave="disableOverlay()" class="col-sm-4 col-12">
-					<a onclick="showModal(3)">
+				<li name="premodal-component">
+					<a name="premodal-link">
 						<div id="over3" class="hidden">
 							<div class="overlay-content">
 								<span id="overlayContent3"></span>
@@ -193,8 +191,7 @@
 								<i class="fa fa-plus mt-4"></i>
 							</div>
 						</div>
-						<img src="https://images.unsplash.com/photo-1415650328328-1909c4ceabdb?ixlib=rb-0.3.5&s=4cb4e1b2310aa5d2307eff04f113d5f0&auto=format&fit=crop&w=750&q=80"
-							alt="">
+						<img name="premodal-img">
 					</a>
 				</li>
 
