@@ -5,9 +5,9 @@ const PROJECTS = [
         'Laravel, PHP', 
         'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
         [
-            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'a', 'a'], 
-            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'a', 'b'],
-            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'a', 'c'],
+            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial', 'Página Inicial'], 
+            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard', 'Página Dashboard'],
+            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard', 'Página Dashboard - Lista de Catálogos'],
         ]
     ],
     [
@@ -17,7 +17,7 @@ const PROJECTS = [
         [
             ['./assets/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial', 'Página Inicial'], 
             ['./assets/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030', 'Página Jogo 2030'],
-            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'Conta com V-Libras', 'V-Libras'],
+            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras', 'Conta com V-Libras'],
         ]
         
     ],
@@ -26,12 +26,12 @@ const PROJECTS = [
         'Laravel, PHP', 
         'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
-            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'a', 'c'],
-            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'a', 'c'],
-            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'a', 'c'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'a', 'c'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'a', 'b'],
-            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'a', 'a'], 
+            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial', 'Página Inicial'],
+            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar', 'Página do Imóvel para Alugar'],
+            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários', 'Página do Chat de Usuários'], 
+            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login', 'Página de Login'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard', 'Página Dashboard'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Lista de Aluguéis na Dashboard', 'Página Dashboard - Lista de Aluguéis'],
         ]
     ],
 ]
@@ -62,7 +62,6 @@ window.onload = function () {
             }
         }
     }
-
 }
 
 
@@ -170,6 +169,7 @@ function showModal(projectNumber) {
         document.getElementById('modal').setAttribute('class', 'show modal');
     }
 }
+
 
 /**
  * DESABILITA A MODAL
