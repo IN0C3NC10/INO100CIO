@@ -24,7 +24,7 @@ const PROJECTS = [
     [
         'Alugo Agora', 
         'Laravel, PHP', 
-        'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat além de gerenciamento de usuários, imóveis e aluguéis.', 
+        'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat, avaliação, além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
             ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial', 'Página Inicial'],
             ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar', 'Página do Imóvel para Alugar'],
@@ -44,7 +44,6 @@ const PROJECTS = [
 window.onload = function () {
     // recupera todas as imagens de exibição do modal e em cada uma é definida a imagem do objeto
     let modalsElem = document.getElementsByName("premodal-component");
-    console.log(modalsElem);
     if (modalsElem.length > 0){
         let modalsLink = document.getElementsByName("premodal-link");
         let modalsImg = document.getElementsByName("premodal-img");
@@ -187,7 +186,7 @@ function showOverlay(projectNumber) {
 
 function disableOverlay() {
     let items = document.getElementsByClassName('overlay');
-    for (let key in items){
+    for(let key = 0; key < items.length;key++){
         items[key].setAttribute('class','hidden');
     }
 }
