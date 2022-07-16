@@ -15,10 +15,10 @@
 <!-- Shields -->
 <p>
 	<img src="https://img.shields.io/badge/Made%20with-HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=E34F26" title="Feito com PHP" alt="Feito com PHP"></img>
-  <img src="https://img.shields.io/badge/Used-CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=1572B6" title="Feito com PHP" alt="Feito com PHP"></img>
-  <img src="https://img.shields.io/badge/Used-JS-F7DF1E?style=for-the-badge&logo=JAVASCRIPT&logoColor=F7DF1E" title="Feito com PHP" alt="Feito com PHP"></img>
+  <img src="https://img.shields.io/badge/Used-CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=1572B6" title="Utilizado CSS3" alt="Utilizado CSS3"></img>
+  <img src="https://img.shields.io/badge/Used-JS-F7DF1E?style=for-the-badge&logo=JAVASCRIPT&logoColor=F7DF1E" title="Utilizado HTML5" alt="Utilizado HTML5"></img>
   <!--<img src="https://img.shields.io/badge/Status-Working-F08705?style=for-the-badge" title="Status do Projeto: Trabalhando" alt="Projeto em Andamento"></img>-->
-  <img src="https://img.shields.io/badge/Status-Done-blue?style=for-the-badge" title="Status do Projeto: Concluído" alt="project-status-done"></img>
+  <img src="https://img.shields.io/badge/Status-Done-blue?style=for-the-badge" title="Status do Projeto: Concluído" alt="Projeto Concluído"></img>
 </p>
 
 
