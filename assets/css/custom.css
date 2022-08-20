@@ -1,24 +1,17 @@
 @import url(default.css);
 
-a{
-    cursor: pointer;
-}
+a{cursor: pointer;}
+a:hover{/* color: var(--one) !important; */font-weight: bold !important;}
 
-a:hover{
-    /* color: var(--one) !important; */
-    font-weight: bold !important;
-}
+.show {display: block !important;}
+.hidden {display: none !important;}
 
-.show {
-    display: block !important;
-}
-
-.hidden {
-    display: none !important;
-}
+.shadow-side{-webkit-box-shadow: 2px 2px 0 0 rgba(0,0,0,0.25);-moz-box-shadow: 2px 2px 0 0 rgba(0,0,0,0.25);box-shadow: 2px 2px 0 0 rgba(0,0,0,0.25);}
+.shadow-bottom{-webkit-box-shadow: 0px 2px 0 0 rgba(0,0,0,0.25);-moz-box-shadow: 0px 2px 0 0 rgba(0,0,0,0.25);box-shadow: 0px 2px 0 0 rgba(0,0,0,0.25);}
 
 .modal{
-    color: #333;
+    color: var(--shadow);
+    background-color: rgb(51, 51, 51, 0.75);
 }
 
 #btnToTop {

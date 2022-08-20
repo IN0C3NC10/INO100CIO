@@ -3,9 +3,9 @@ $( document ).ready(function() {
     // jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
-            $(".fixed-top").addClass("top-nav-collapse navbar-light");
+            $(".fixed-top").addClass("top-nav-collapse navbar-light shadow-bottom");
         } else {
-            $(".fixed-top").removeClass("top-nav-collapse navbar-light");
+            $(".fixed-top").removeClass("top-nav-collapse navbar-light shadow-bottom");
         }
     });
 
