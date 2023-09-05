@@ -2,12 +2,12 @@
 const PROJECTS = [
     [
         'Rocha Digital', 
-        'Laravel, PHP', 
+        'Laravel (PHP)', 
         'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
         [
-            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial', 'Página Inicial'], 
-            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard', 'Página Dashboard'],
-            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard', 'Página Dashboard - Lista de Catálogos'],
+            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial'], 
+            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard'],
+            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard'],
         ]
     ],
     [
@@ -15,23 +15,51 @@ const PROJECTS = [
         'PHP', 
         'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
         [
-            ['./assets/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial', 'Página Inicial'], 
-            ['./assets/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030', 'Página Jogo 2030'],
-            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras', 'Conta com V-Libras'],
+            ['./assets/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
+            ['./assets/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
+            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras'],
         ]
         
     ],
     [
         'Alugo Agora', 
-        'Laravel, PHP', 
+        'Laravel (PHP)', 
         'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat, avaliação, além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
-            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial', 'Página Inicial'],
-            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar', 'Página do Imóvel para Alugar'],
-            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários', 'Página do Chat de Usuários'], 
-            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login', 'Página de Login'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard', 'Página Dashboard'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Lista de Aluguéis na Dashboard', 'Página Dashboard - Lista de Aluguéis'],
+            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial'],
+            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar'],
+            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários'], 
+            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard'],
+            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Página Dashboard - Lista de Aluguéis'],
+        ]
+    ],
+    [
+        'Vida - Controle de Voluntários', 
+        'Node (JS)', 
+        'Projeto desenvolvido para a equipe da ONG Vida para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
+        [
+            ['./assets/img/projects/vida-cv/screen_1.png', 'Página de Login'],
+            ['./assets/img/projects/vida-cv/screen_2.png', 'Página para Inserir Licença'],
+            ['./assets/img/projects/vida-cv/screen_3.png', 'Página de Recuperar Senha'],
+            ['./assets/img/projects/vida-cv/screen_4.png', 'Página Inicial'],
+            ['./assets/img/projects/vida-cv/screen_5.png', 'Página Inicial - QRCode de acesso local'],
+            ['./assets/img/projects/vida-cv/screen_6.png', 'Página de Perfil'],
+            ['./assets/img/projects/vida-cv/screen_7.png', 'Página do Sistema'],
+            ['./assets/img/projects/vida-cv/screen_8.png', 'Página do Sistema - Notas de Atualização'],
+            ['./assets/img/projects/vida-cv/screen_9.png', 'Página da Lista de Voluntários'],
+            ['./assets/img/projects/vida-cv/screen_10.png', 'Página de Cadastro de Voluntários'],
+        ]
+    ],
+    [
+        'ToDO', 
+        'Node (JS)', 
+        'Projeto desenvolvido para facilitar o controle de tarefas, permitindo o fácil gerenciamento das mesmas.', 
+        [
+            ['./assets/img/projects/todo/screen_1.png', 'Página Inicial'],
+            ['./assets/img/projects/todo/screen_2.png', 'Página de Cadastro da Tarefas'],
+            ['./assets/img/projects/todo/screen_4.png', 'Página de Inicial - Mobile', 'retrato'],
+            ['./assets/img/projects/todo/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
 ]
@@ -104,6 +132,7 @@ function buildCarousel(imagesPath) {
         let carousel = document.getElementById('carousel');
         let position = 0;
         carousel.innerHTML = '';
+        let size_class = 'w-100';
 
         for (let data in imagesPath) {
             let div = document.createElement('div');
@@ -116,11 +145,14 @@ function buildCarousel(imagesPath) {
 
             // cria a imagem e define os atributos para a mesma
             let img = document.createElement('img');
+            if (imagesPath[data][2] != undefined){
+                size_class = 'w-30p';
+            }
             let imgAttributes = {
-                'class': 'd-block w-100',
+                'class': 'd-block '+size_class,
                 'src': imagesPath[data][0],
                 'alt': imagesPath[data][1],
-                'title': imagesPath[data][2]
+                'title': imagesPath[data][1]
             }
             // percorre o objeto, setando cada atributo e seu conteúdo
             for (let property in imgAttributes) {
@@ -141,7 +173,7 @@ function buildCarousel(imagesPath) {
  * @param {Number} projectNumber Recebe o nome do projeto (já predefinido na função) e automaticamente irá criar o carrossel correspondente
  */
 function showModal(projectNumber) {
-    if (projectNumber != '' && projectNumber > 0 && projectNumber < 4) {
+    if (projectNumber != '' && projectNumber > 0) {
         // altera de numero do projeto para a posição do projeto
         projectNumber--;
         let modalCarousel = document.getElementById('carouselContent');
