@@ -6,6 +6,10 @@ a:hover{/* color: var(--one) !important; */font-weight: bold !important;}
 .show {display: block !important;}
 .hidden {display: none !important;}
 
+.line-through{
+    text-decoration: line-through !important;
+}
+
 .w-30p{
     width: 30% !important;
 }

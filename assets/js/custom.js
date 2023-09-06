@@ -37,7 +37,7 @@ const PROJECTS = [
     [
         'Vida - Controle de Voluntários', 
         'Node (JS)', 
-        'Projeto desenvolvido para a equipe da ONG Vida para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
+        'Projeto desenvolvido para a equipe da <a href="https://www.ongvida.org/" target="__blank">ONG Vida</a> para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
         [
             ['./assets/img/projects/vida-cv/screen_1.png', 'Página de Login'],
             ['./assets/img/projects/vida-cv/screen_2.png', 'Página para Inserir Licença'],
@@ -76,13 +76,13 @@ window.onload = function () {
         let modalsLink = document.getElementsByName("premodal-link");
         let modalsImg = document.getElementsByName("premodal-img");
         for(let i = 0; i < modalsElem.length; i++){
-            // atributos para o elemento
-            modalsElem[i].setAttribute('onmouseover', 'showOverlay('+(i+1)+')');
-            modalsElem[i].setAttribute('onmouseleave', 'disableOverlay()');
             modalsElem[i].setAttribute('class', 'col-md-4 col-12');
-            // atributos para os links
-            modalsLink[i].setAttribute('onclick', 'showModal('+(i+1)+')');
-            if(PROJECTS[i][3] != undefined){
+            if(PROJECTS[i] != undefined){
+                // atributos para o elemento
+                modalsElem[i].setAttribute('onmouseover', 'showOverlay('+(i+1)+')');
+                modalsElem[i].setAttribute('onmouseleave', 'disableOverlay()');
+                // atributos para os links
+                modalsLink[i].setAttribute('onclick', 'showModal('+(i+1)+')');
                 modalsImg[i].setAttribute('src', PROJECTS[i][3][0][0]);
             } else {
                 modalsImg[i].setAttribute('src', './assets/img/inocencio-background-header.png');
@@ -209,6 +209,10 @@ function disableModal() {
     document.getElementById('modal').classList.remove('show');
 }
 
+/**
+ * - Habilita a overlay nos projetos
+ * @param {Integer} projectNumber Deve ser passado o número do projeto o qual será utilizado a overlay
+ */
 function showOverlay(projectNumber) {
     if (projectNumber > 0){
         document.getElementById('overlayContent'+projectNumber).textContent = PROJECTS[projectNumber-1][0];
@@ -216,6 +220,9 @@ function showOverlay(projectNumber) {
     }
 }
 
+/**
+ * - Desabilita a overlay nos projetos
+ */
 function disableOverlay() {
     let items = document.getElementsByClassName('overlay');
     for(let key = 0; key < items.length;key++){
