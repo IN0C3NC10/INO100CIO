@@ -39,16 +39,16 @@ const PROJECTS = [
         'Node (JS)', 
         'Projeto desenvolvido para a equipe da <a href="https://www.ongvida.org/" target="__blank">ONG Vida</a> para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
         [
-            ['./assets/img/projects/vida-cv/screen_1.png', 'Página de Login'],
-            ['./assets/img/projects/vida-cv/screen_2.png', 'Página para Inserir Licença'],
-            ['./assets/img/projects/vida-cv/screen_3.png', 'Página de Recuperar Senha'],
-            ['./assets/img/projects/vida-cv/screen_4.png', 'Página Inicial'],
-            ['./assets/img/projects/vida-cv/screen_5.png', 'Página Inicial - QRCode de acesso local'],
-            ['./assets/img/projects/vida-cv/screen_6.png', 'Página de Perfil'],
-            ['./assets/img/projects/vida-cv/screen_7.png', 'Página do Sistema'],
-            ['./assets/img/projects/vida-cv/screen_8.png', 'Página do Sistema - Notas de Atualização'],
-            ['./assets/img/projects/vida-cv/screen_9.png', 'Página da Lista de Voluntários'],
-            ['./assets/img/projects/vida-cv/screen_10.png', 'Página de Cadastro de Voluntários'],
+            ['./assets/img/projects/Vida-CV/screen_1.png', 'Página de Login'],
+            ['./assets/img/projects/Vida-CV/screen_2.png', 'Página para Inserir Licença'],
+            ['./assets/img/projects/Vida-CV/screen_3.png', 'Página de Recuperar Senha'],
+            ['./assets/img/projects/Vida-CV/screen_4.png', 'Página Inicial'],
+            ['./assets/img/projects/Vida-CV/screen_5.png', 'Página Inicial - QRCode de acesso local'],
+            ['./assets/img/projects/Vida-CV/screen_6.png', 'Página de Perfil'],
+            ['./assets/img/projects/Vida-CV/screen_7.png', 'Página do Sistema'],
+            ['./assets/img/projects/Vida-CV/screen_8.png', 'Página do Sistema - Notas de Atualização'],
+            ['./assets/img/projects/Vida-CV/screen_9.png', 'Página da Lista de Voluntários'],
+            ['./assets/img/projects/Vida-CV/screen_10.png', 'Página de Cadastro de Voluntários'],
         ]
     ],
     [
@@ -56,10 +56,10 @@ const PROJECTS = [
         'Node (JS)', 
         'Projeto desenvolvido para facilitar o controle de tarefas, permitindo o fácil gerenciamento das mesmas.', 
         [
-            ['./assets/img/projects/todo/screen_1.png', 'Página Inicial'],
-            ['./assets/img/projects/todo/screen_2.png', 'Página de Cadastro da Tarefas'],
-            ['./assets/img/projects/todo/screen_4.png', 'Página de Inicial - Mobile', 'retrato'],
-            ['./assets/img/projects/todo/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
+            ['./assets/img/projects/ToDO/screen_1.png', 'Página Inicial'],
+            ['./assets/img/projects/ToDO/screen_2.png', 'Página de Cadastro da Tarefas'],
+            ['./assets/img/projects/ToDO/screen_4.png', 'Página de Inicial - Mobile', 'retrato'],
+            ['./assets/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
 ]
