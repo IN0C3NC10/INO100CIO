@@ -62,6 +62,16 @@ const PROJECTS = [
             ['./public/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
+    [
+        'Vitória - Designer Gráfico', 
+        'HTML', 
+        'Site desenvolvido em virtude de possuir de fácil acesso, o questionário para criar a marca dos clientes da Vitória - Designer gráfico. Site possui apenas uma página com as questões aparecendo de forma dinâmica após ter respondido uma delas, é possível conferi-lo <a href="https://in0c3nc10.github.io/Vitoria-Designer-Grafico/" target="_blank">clicando aqui</a>', 
+        [
+            ['./public/img/projects/Vitoria-DG/screen_1.png', 'Página Inicial'],
+            ['./public/img/projects/Vitoria-DG/screen_2.png', 'Primeira questão'],
+            ['./public/img/projects/Vitoria-DG/screen_3.png', 'Página de agradecimento'],
+        ]
+    ],
 ]
 
 
