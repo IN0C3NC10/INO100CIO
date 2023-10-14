@@ -1,7 +1,7 @@
 <h1 align="center" id="title">IN0C3NC10 - WebProfile</h1>
 <!-- Logo -->
 <p align="center">
-  <img height="300" alt="IN0C3NC10 - WebProfile" title="IN0C3NC10 - WebProfile" src="./assets/img/logo.gif" />
+  <img height="300" alt="IN0C3NC10 - WebProfile" title="IN0C3NC10 - WebProfile" src="./public/img/logo.gif" />
 </p>
 
 

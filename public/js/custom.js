@@ -5,9 +5,9 @@ const PROJECTS = [
         'Laravel (PHP)', 
         'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
         [
-            ['./assets/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial'], 
-            ['./assets/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard'],
-            ['./assets/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard'],
+            ['./public/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial'], 
+            ['./public/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard'],
+            ['./public/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard'],
         ]
     ],
     [
@@ -15,9 +15,9 @@ const PROJECTS = [
         'PHP', 
         'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
         [
-            ['./assets/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
-            ['./assets/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
-            ['./assets/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras'],
+            ['./public/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
+            ['./public/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
+            ['./public/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras'],
         ]
         
     ],
@@ -26,12 +26,12 @@ const PROJECTS = [
         'Laravel (PHP)', 
         'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat, avaliação, além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
-            ['./assets/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial'],
-            ['./assets/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar'],
-            ['./assets/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários'], 
-            ['./assets/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard'],
-            ['./assets/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Página Dashboard - Lista de Aluguéis'],
+            ['./public/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial'],
+            ['./public/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar'],
+            ['./public/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários'], 
+            ['./public/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login'],
+            ['./public/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard'],
+            ['./public/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Página Dashboard - Lista de Aluguéis'],
         ]
     ],
     [
@@ -39,16 +39,16 @@ const PROJECTS = [
         'Node (JS)', 
         'Projeto desenvolvido para a equipe da <a href="https://www.ongvida.org/" target="__blank">ONG Vida</a> para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
         [
-            ['./assets/img/projects/Vida-CV/screen_1.png', 'Página de Login'],
-            ['./assets/img/projects/Vida-CV/screen_2.png', 'Página para Inserir Licença'],
-            ['./assets/img/projects/Vida-CV/screen_3.png', 'Página de Recuperar Senha'],
-            ['./assets/img/projects/Vida-CV/screen_4.png', 'Página Inicial'],
-            ['./assets/img/projects/Vida-CV/screen_5.png', 'Página Inicial - QRCode de acesso local'],
-            ['./assets/img/projects/Vida-CV/screen_6.png', 'Página de Perfil'],
-            ['./assets/img/projects/Vida-CV/screen_7.png', 'Página do Sistema'],
-            ['./assets/img/projects/Vida-CV/screen_8.png', 'Página do Sistema - Notas de Atualização'],
-            ['./assets/img/projects/Vida-CV/screen_9.png', 'Página da Lista de Voluntários'],
-            ['./assets/img/projects/Vida-CV/screen_10.png', 'Página de Cadastro de Voluntários'],
+            ['./public/img/projects/Vida-CV/screen_1.png', 'Página de Login'],
+            ['./public/img/projects/Vida-CV/screen_2.png', 'Página para Inserir Licença'],
+            ['./public/img/projects/Vida-CV/screen_3.png', 'Página de Recuperar Senha'],
+            ['./public/img/projects/Vida-CV/screen_4.png', 'Página Inicial'],
+            ['./public/img/projects/Vida-CV/screen_5.png', 'Página Inicial - QRCode de acesso local'],
+            ['./public/img/projects/Vida-CV/screen_6.png', 'Página de Perfil'],
+            ['./public/img/projects/Vida-CV/screen_7.png', 'Página do Sistema'],
+            ['./public/img/projects/Vida-CV/screen_8.png', 'Página do Sistema - Notas de Atualização'],
+            ['./public/img/projects/Vida-CV/screen_9.png', 'Página da Lista de Voluntários'],
+            ['./public/img/projects/Vida-CV/screen_10.png', 'Página de Cadastro de Voluntários'],
         ]
     ],
     [
@@ -56,10 +56,10 @@ const PROJECTS = [
         'Node (JS)', 
         'Projeto desenvolvido para facilitar o controle de tarefas, permitindo o fácil gerenciamento das mesmas.', 
         [
-            ['./assets/img/projects/ToDO/screen_1.png', 'Página Inicial'],
-            ['./assets/img/projects/ToDO/screen_2.png', 'Página de Cadastro da Tarefas'],
-            ['./assets/img/projects/ToDO/screen_4.png', 'Página de Inicial - Mobile', 'retrato'],
-            ['./assets/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
+            ['./public/img/projects/ToDO/screen_1.png', 'Página Inicial'],
+            ['./public/img/projects/ToDO/screen_2.png', 'Página de Cadastro da Tarefas'],
+            ['./public/img/projects/ToDO/screen_4.png', 'Página de Inicial - Mobile', 'retrato'],
+            ['./public/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
 ]
@@ -85,7 +85,7 @@ window.onload = function () {
                 modalsLink[i].setAttribute('onclick', 'showModal('+(i+1)+')');
                 modalsImg[i].setAttribute('src', PROJECTS[i][3][0][0]);
             } else {
-                modalsImg[i].setAttribute('src', './assets/img/inocencio-background-header.png');
+                modalsImg[i].setAttribute('src', './public/img/inocencio-background-header.png');
             }
         }
     }
