@@ -13,7 +13,7 @@ const PROJECTS = [
     [
         'Agenda Sustentável', 
         'PHP', 
-        'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
+        'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e com as descrições das atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
         [
             ['./public/img/projects/Agenda-Sustentavel/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
             ['./public/img/projects/Agenda-Sustentavel/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
@@ -37,7 +37,7 @@ const PROJECTS = [
     [
         'Vida - Controle de Voluntários', 
         'Node (JS)', 
-        'Projeto desenvolvido para a equipe da <a href="https://www.ongvida.org/" target="__blank">ONG Vida</a> para facilitar o controle de seus voluntários e dos Termos que são necessários.', 
+        'Projeto desenvolvido para a equipe da <a href="https://www.ongvida.org/" target="__blank">ONG Vida</a> para facilitar o controle de seus voluntários e dos Termos que são necessários. Permitindo gerar termos para vários usuários com as informações previamente cadastradas e o acesso restrito e controlado para cada membro da ONG.', 
         [
             ['./public/img/projects/Vida-CV/screen_1.png', 'Página de Login'],
             ['./public/img/projects/Vida-CV/screen_2.png', 'Página para Inserir Licença'],
@@ -54,7 +54,7 @@ const PROJECTS = [
     [
         'ToDO', 
         'Node (JS)', 
-        'Projeto desenvolvido para facilitar o controle de tarefas, permitindo o fácil gerenciamento das mesmas.', 
+        'Projeto desenvolvido para facilitar o controle de tarefas, permitindo o fácil gerenciamento das mesmas. Além disso, especialmente para fins de testes, o ToDO contém um sistema de verificação de permissão de acesso e licença (que se expira automaticamente após um período pré-determinado) também, conta com uma verificação de computador permitindo apenas de rodar em uma máquina por vez.', 
         [
             ['./public/img/projects/ToDO/screen_1.png', 'Página Inicial'],
             ['./public/img/projects/ToDO/screen_2.png', 'Página de Cadastro da Tarefas'],
