@@ -105,6 +105,19 @@ a:hover{/* color: var(--one) !important; */font-weight: bold !important;}
     justify-content: center !important;
 }
 
+#message{
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0 100px 0;
+    text-align: center;
+    color: #fff;
+    background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,1)),url('../img/inocencio-backgroud-content.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
 @media (max-width: 576px){
     .modal-dialog{
         height: auto !important;

@@ -5,9 +5,9 @@ const PROJECTS = [
         'Laravel (PHP)', 
         'Site desenvolvido durante meu estágio com o framework Laravel, contando com dashboard, gerenciamento de produtos, catálogos, usuários e etc.', 
         [
-            ['./public/img/projects/screenshot-rocha-digital-home.png', 'Página Inicial'], 
-            ['./public/img/projects/screenshot-rocha-digital-dashboard.png', 'Página Dashboard'],
-            ['./public/img/projects/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard'],
+            ['./public/img/projects/Rocha-Digital/screenshot-rocha-digital-home.png', 'Página Inicial'], 
+            ['./public/img/projects/Rocha-Digital/screenshot-rocha-digital-dashboard.png', 'Página Dashboard'],
+            ['./public/img/projects/Rocha-Digital/screenshot-rocha-digital-catalogos.png', 'Página dos Catálogos na Dashboard'],
         ]
     ],
     [
@@ -15,9 +15,9 @@ const PROJECTS = [
         'PHP', 
         'Site desenvolvido em meu trabalho voluntário na OSCIP <a href="https://www.passatempoeducativo.org.br/" target="_blank">Passatempo Educativo</a>, contando simplesmente com uma página de contato e as atividades deste projeto. É possível conferi-lo <a href="https://www.agendasustentavel.com.br/" target="_blank">clicando aqui</a>.',
         [
-            ['./public/img/projects/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
-            ['./public/img/projects/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
-            ['./public/img/projects/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras'],
+            ['./public/img/projects/Agenda-Sustentavel/screenshot-agenda-sustentavel-home.png', 'Página Inicial'], 
+            ['./public/img/projects/Agenda-Sustentavel/screenshot-agenda-sustentavel-jogo2030.png', 'Página Jogo 2030'],
+            ['./public/img/projects/Agenda-Sustentavel/screenshot-agenda-sustentavel-vlibras.png', 'V-Libras'],
         ]
         
     ],
@@ -26,12 +26,12 @@ const PROJECTS = [
         'Laravel (PHP)', 
         'Projeto desenvolvido como Trabalho de Graduação em Sistemas para Internet, feito com a framework Laravel, contando com chat, avaliação, além de gerenciamento de usuários, imóveis e aluguéis.', 
         [
-            ['./public/img/projects/sreenshot-alugo-agora-home.png', 'Página Inicial'],
-            ['./public/img/projects/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar'],
-            ['./public/img/projects/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários'], 
-            ['./public/img/projects/sreenshot-alugo-agora-login.png', 'Página de Login'],
-            ['./public/img/projects/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard'],
-            ['./public/img/projects/sreenshot-alugo-agora-dashboard-alugueis.png', 'Página Dashboard - Lista de Aluguéis'],
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-home.png', 'Página Inicial'],
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-imovel.png', 'Página do Imóvel para Alugar'],
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-chat.png', 'Página do Chat de Usuários'], 
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-login.png', 'Página de Login'],
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-dashboard.png', 'Página Dashboard'],
+            ['./public/img/projects/Alugo-Agora/sreenshot-alugo-agora-dashboard-alugueis.png', 'Página Dashboard - Lista de Aluguéis'],
         ]
     ],
     [
@@ -62,16 +62,6 @@ const PROJECTS = [
             ['./public/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
-    [
-        'Vitória - Designer Gráfico', 
-        'HTML', 
-        'Site desenvolvido em virtude de possuir de fácil acesso, o questionário para criar a marca dos clientes da Vitória - Designer gráfico. Site possui apenas uma página com as questões aparecendo de forma dinâmica após ter respondido uma delas, é possível conferi-lo <a href="https://in0c3nc10.github.io/Vitoria-Designer-Grafico/" target="_blank">clicando aqui</a>', 
-        [
-            ['./public/img/projects/Vitoria-DG/screen_1.png', 'Página Inicial'],
-            ['./public/img/projects/Vitoria-DG/screen_2.png', 'Primeira questão'],
-            ['./public/img/projects/Vitoria-DG/screen_3.png', 'Página de agradecimento'],
-        ]
-    ],
 ]
 
 
@@ -80,22 +70,37 @@ const PROJECTS = [
  * ********************************************************************************************
 **/
 window.onload = function () {
-    // recupera todas as imagens de exibição do modal e em cada uma é definida a imagem do objeto
-    let modalsElem = document.getElementsByName("premodal-component");
-    if (modalsElem.length > 0){
-        let modalsLink = document.getElementsByName("premodal-link");
-        let modalsImg = document.getElementsByName("premodal-img");
-        for(let i = 0; i < modalsElem.length; i++){
-            modalsElem[i].setAttribute('class', 'col-md-4 col-12');
+    // recupera onde a galeria será usada
+    let gallery = document.getElementById('gallery-projects')
+    if (PROJECTS.length > 0){
+        // percorre todos os elementos do projeto e vai sendo criado seus componentes e suas respectivas funções
+        for(let i = 0; i < PROJECTS.length; i++){
+            gallery.innerHTML+=
+            '<li id="project-'+i+'" name="premodal-component">'+
+            '    <a id="premodal-link-'+i+'">'+
+            '        <div id="over'+i+'" class="hidden">'+
+            '            <div class="overlay-content">'+
+            '                <span id="overlayContent'+i+'"></span>'+
+            '                <br>'+
+            '                <i class="fa fa-plus mt-4"></i>'+
+            '            </div>'+
+            '        </div>'+
+            '        <img id="premodal-img-'+i+'">'+
+            '    </a>'+
+            '</li>'
+            let modalsElem = document.getElementById("project-"+i);
+            let modalsLink = document.getElementById("premodal-link-"+i);
+            let modalsImg = document.getElementById("premodal-img-"+i);
+            modalsElem.setAttribute('class', 'col-md-4 col-12');
             if(PROJECTS[i] != undefined){
                 // atributos para o elemento
-                modalsElem[i].setAttribute('onmouseover', 'showOverlay('+(i+1)+')');
-                modalsElem[i].setAttribute('onmouseleave', 'disableOverlay()');
+                modalsElem.setAttribute('onmouseover', 'showOverlay('+(i)+')');
+                modalsElem.setAttribute('onmouseleave', 'disableOverlay()');
                 // atributos para os links
-                modalsLink[i].setAttribute('onclick', 'showModal('+(i+1)+')');
-                modalsImg[i].setAttribute('src', PROJECTS[i][3][0][0]);
+                modalsLink.setAttribute('onclick', 'showModal('+(i)+')');
+                modalsImg.setAttribute('src', PROJECTS[i][3][0][0]);
             } else {
-                modalsImg[i].setAttribute('src', './public/img/inocencio-background-header.png');
+                modalsImg.setAttribute('src', './public/img/inocencio-background-header.png');
             }
         }
     }
@@ -183,9 +188,7 @@ function buildCarousel(imagesPath) {
  * @param {Number} projectNumber Recebe o nome do projeto (já predefinido na função) e automaticamente irá criar o carrossel correspondente
  */
 function showModal(projectNumber) {
-    if (projectNumber != '' && projectNumber > 0) {
-        // altera de numero do projeto para a posição do projeto
-        projectNumber--;
+    if (projectNumber >= 0) {
         let modalCarousel = document.getElementById('carouselContent');
         let modalTitle = document.getElementById('modalTitle');
         let modalContent = document.getElementById('contentModal');
@@ -224,8 +227,8 @@ function disableModal() {
  * @param {Integer} projectNumber Deve ser passado o número do projeto o qual será utilizado a overlay
  */
 function showOverlay(projectNumber) {
-    if (projectNumber > 0){
-        document.getElementById('overlayContent'+projectNumber).textContent = PROJECTS[projectNumber-1][0];
+    if (projectNumber >= 0){
+        document.getElementById('overlayContent'+projectNumber).textContent = PROJECTS[projectNumber][0];
         document.getElementById('over'+projectNumber).setAttribute('class', 'overlay col-12');
     }
 }
