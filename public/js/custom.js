@@ -62,6 +62,17 @@ const PROJECTS = [
             ['./public/img/projects/ToDO/screen_3.png', 'Página de Cadastro da Tarefas - Mobile', 'retrato'], 
         ]
     ],
+    [
+        'Automate Posts', 
+        'Node (JS) e Python', 
+        'Projeto desenvolvido com principal objetivo de maximizar a produtividade, permitindo programar a realização de postagens tanto no Facebook como no LinkedIn, realizadas por meio do conteúdo previamente cadastrado e executado por um bot. De forma mais simples, pode ser cadastrado uma postagem a ser feita durante o período de almoço ou mesmo durante todo o dia (em períodos pré-definidos) bastando somente o computador estar ligado.',
+        [
+            ['./public/img/projects/Automate-Posts/home.png', 'Página Inicial'],
+            ['./public/img/projects/Automate-Posts/new_post.png', 'Página de Cadastro da Postagem'],
+            ['./public/img/projects/Automate-Posts/posts_done.png', 'Página de listagem das Postagens concluídas'],
+            ['./public/img/projects/Automate-Posts/imgs_from_posts.png', 'Modal para visualizar os anexos da postagem'], 
+        ]
+    ],
 ]
 
 
