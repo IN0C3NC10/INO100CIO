@@ -36,7 +36,7 @@ $ git clone https://github.com/IN0C3NC10/IN0C3NC10-Website.git
 <!-- Autor -->
 <h2 align="left" id="autor">Autor</h2>
 <p>
-	<a href="https://github.com/IN0C3NC10">
+	<a href="https://in0c3nc10.github.io/INO100CIO/">
 		<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/73368174?v=4" width="100px;" alt="autor-image" title="IN0C3NC10"/>
 	</a>
 	<br />
@@ -44,16 +44,12 @@ $ git clone https://github.com/IN0C3NC10/IN0C3NC10-Website.git
 </p>
 
 <p align="left">
-  <!-- Outlook -->
-  <a href="mailto:bruno.inocencio@fatec.sp.gov.br" alt="Outlook" target="_blank">
-    <img height="35" src="https://img.shields.io/badge/Outlook-00001a?style=for-the-badge&logo=microsoft-outlook&logoColor=0078D4" />
-  </a>
   <!-- Linkedin -->
-  <a href="https://cutt.ly/nQlVjQV" alt="Linkedin" target="_blank">
-    <img height="35" src="https://img.shields.io/badge/-LinkedIn-00001a?style=for-the-badge&logo=linkedin&logoColor=%230077B5" />
+  <a href="https://cutt.ly/nQlVjQV" alt="Linkedin" title="Does anyone actually use this!?">
+    <img height="35" src="https://img.shields.io/badge/-LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=%230077B5" />
   </a>
-  <!-- GitHub -->
-  <a href="https://github.com/IN0C3NC10" alt="GitHub" target="_blank">
-    <img height="35" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  <!-- GitHub Site -->
+  <a href="https://in0c3nc10.github.io/INO100CIO/" title="Let's go ahead, don't be shy!" alt="Site INO100C1O">
+    <img height="35" src="https://img.shields.io/badge/Site IN0C100C10-000000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>

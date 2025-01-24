@@ -39,6 +39,10 @@ a:hover{/* color: var(--one) !important; */font-weight: bold !important;}
     overflow: auto;
 }
 
+.btn:focus{
+    box-shadow: none !important;
+}
+
 #btnToTop {
     display: none;
     position: fixed;
@@ -103,6 +107,11 @@ a:hover{/* color: var(--one) !important; */font-weight: bold !important;}
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
     display: flex !important;
     justify-content: center !important;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    background-color: black;
+    opacity: 0.5 !important;
 }
 
 #message{
