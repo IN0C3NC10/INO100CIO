@@ -175,7 +175,7 @@ function buildCarousel(imagesPath) {
                 size_class = 'w-30p';
             }
             let imgAttributes = {
-                'class': 'd-block '+size_class,
+                'class': 'd-block b-radius '+size_class,
                 'src': imagesPath[data][0],
                 'alt': imagesPath[data][1],
                 'title': imagesPath[data][1]
